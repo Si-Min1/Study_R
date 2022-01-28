@@ -27,14 +27,15 @@ str(tmp) #아직 #NAME? 이 남아있다고 뜸
 
 subset(tmp,tmp=='#NAME?')
 
+#팩터 안의 레벨값은 안바뀜, 그래서 캐릭형으로 변경 후 재작업
+tmp1=as.factor(as.character(tmp))
+str(tmp1)
 
 # 날짜 데이터의 경우
 # 년-월-일 이라는date타입
 # 근데 데이터를 받을땐 20121013이나 2012. 12. 02 처럼 올 수 있음
 
-#팩터 안의 레벨값은 안바뀜, 그래서 캐릭형으로 변경 후 재작업
-tmp1=as.factor(as.character(tmp))
-str(tmp1)
+
 
 
 ## [문제 1-1] 데이터 읽기전 메모리 모두 제거 ##
